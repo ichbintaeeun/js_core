@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			// let sayHiMixin = {
+			// 	sayHi (){
+			// 		alert(`Hello ${this.name}`);
+			// 	},
+			// 	sayBye (){
+			// 		alert(`Bye ${this.name}`);
+			// 	}
+			// };
+
+			// class User{
+			// 	constuctor(name){
+			// 		this.name = name;
+			// 	}
+			// }
+
+			// Object.assign(User.prototype, sayHiMixin);
+
+			// new User("Dude").sayHi();
+
+			let sayMixin = {
+				say(phrase){
+					alert(phrase);
+				}
+			};
+
+			let sayHiMixin = {
+				__proto__: sayMixin,
+
+				sayHi(){
+					super.say(`Hello ${this.name}`);
+				},
+				sayBye(){
+					super.say(`Bye ${this.name}`);
+				}
+			};
+
+			class User{
+				constuctor(name){
+					this.name = name;
+				}
+			}
+
+			Object.assign(User.prototype, sayHiMixin);
+
+			new User("Dude").sayHi();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

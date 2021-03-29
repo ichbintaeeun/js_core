@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			// let error  = new Error('이상한 일이 발생했습니다.');
+			// alert(error.name);
+			// alert(error.message);
+
+			// try{
+			// 	JSON.parse('{잘못된 형식의 json');
+			// }catch(e){
+			// 	alert(e.name);
+			// 	alert(e.message);
+			// }
+
+			let json = '{"age":30}';
+
+			try{
+				let user = JSON.parse(json);
+
+				if(!user.name){
+					throw new SyntaxError("불완전한 데이터: 이름 없음");
+				}
+				alert(user.name);
+			}catch(e){
+				alert("JSON Error: " + e.message);
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
