@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			try{
+				alert('try 블록 시작');
+				if(confirm('에러를 만들겠습니까')) 이상한 코드();
+			} catch(e){
+				alert('catch');
+			} finally{
+				alert('finally');
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
