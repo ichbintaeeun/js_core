@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			// function f(){
+			// 	try{
+			// 		alert('start');
+			// 		return 'result';
+			// 	}catch(e){
+			// 		/// ...
+			// 	}finally{
+			// 		alert('init');
+			// 	}
+			// }
+
+			// f();
+
+			function f(){
+				try{
+					alert('start');
+					throw new Error('error');
+				}catch(e){
+					if('if you can not handle this error..'){
+						throw e;
+					}
+				}finally{
+					alert('init!')
+				}
+			}
+
+			f();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<script>
+		// class CoffeeMachine{
+		//  //..
+		//  constructor(power){
+		//    this._power = power;
+		//  }
+
+		//  get power(){
+		//    return this._power;
+		//  }
+		// }
+
+		// let coffeeMachine = new CoffeeMachine(100);
+		// alert(`전력량이 ${coffeeMachine.power}인 커피머신을 만듭니다.`);
+		// coffeeMachine.power = 25;
+
+		class CoffeeMachine{
+		 #waterLimit = 200;
+
+		 #checkWater(value){
+			 if(value < 0) throw Error('물의 양은 음수가 될 수 없습니다.');
+			 if(value > this.#waterLimit) throw Error('물이 용량을 초과합니다.');
+		 }
+		}
+
+		let coffeeMachine = new CoffeeMachine();
+
+		coffeeMachine.#checkWater();
+		coffeeMachine.#waterLimit = 1000;
+	</script>
+</head>
+<body>
+</body>
+</html>

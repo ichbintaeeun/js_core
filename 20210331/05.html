@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			// class CoffeeMachine{
+			//  waterAmount = 0;
+
+			//  constructor(power){
+			//    this.power = power;
+			//    alert(`전력량이 ${power}인 커피머신을 만듭니다.`);
+			//  }
+			// }
+
+			// let coffeeMachine = new CoffeeMachine(100);
+
+			// coffeeMachine.waterAmount = 200;
+
+			// class CoffeeMachine{
+			//  _waterAmount = 0; // protected 프로퍼티, 외부 접근이 불가능한 프로퍼티나 메서드는 통상적으로 앞에 _을 붙힘.
+
+			//  set waterAmount(value){
+			//    if(value<0) throw new Error('물의 양은 음수가 될 수 없습니다.');
+			//    this._waterAmount = value;
+			//  }
+
+			//  get waterAmount(){
+			//    return this._waterAmount;
+			//  }
+
+			//  constructor(power){
+			//    this._power = power;
+			//  }
+			// }
+
+			// let coffeeMachine = new CoffeeMachine(100);
+
+			// coffeeMachine.waterAmount = -10;
+
+			class CoffeeMachine{
+				_waterAmount = 0;
+
+				setWaterAmount(value){
+					if(value < 0) throw new Error('물의 양은 음수가 될 수 없습니다.');
+					this._waterAmount = value;
+				}
+
+				getWaterAmount(){
+					return this._waterAmount;
+				}
+			}
+
+			new CoffeeMachine().setWaterAmount(100);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
