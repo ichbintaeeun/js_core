@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			// 과제 : Does a function pickup latest changes?
+			// let name = 'John';
+
+			// function sayHi(){
+			// 	console.log('Hi,' + name);
+			// }
+
+			// name = 'Pete';
+			// sayHi();
+
+			// 과제 : Which variables are available?
+			function makeWorker(){
+				let name = "Pete";
+
+				return function(){
+					alert(name);
+				};
+			}
+
+			let name = 'John';
+			let work = makeWorker();
+
+			work();
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			// function f(){
+			// 	let value = 123;
+
+			// 	return function(){
+			// 		console.log(value);
+			// 	}
+			// }
+
+			// let g = f();
+
+			// function f(){
+			// 	let value = Math.random();
+
+			// 	return function(){ console.log(value); };
+			// }
+
+			// let arr = [f(),f(),f()];
+
+			function f(){
+				let value = 123;
+
+				return function(){
+					console.log(value);
+				}
+			}
+
+			let g = f();
+			g = null;
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
