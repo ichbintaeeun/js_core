@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			function makeCounter(){
+				function counter(){
+					return counter.count++;
+				}
+				counter.count = 0;
+				return counter;
+			}
+
+			let counter = makeCounter();
+
+			counter.count = 10;
+			console.log( counter());
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

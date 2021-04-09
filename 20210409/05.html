@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			function sayHi(){
+				console.log('hi');
+
+				sayHi.counter++;
+			}
+
+			sayHi.counter = 0;
+
+			sayHi();
+			sayHi();
+
+			console.log(`호출 횟수: ${sayHi.counter}회`);
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

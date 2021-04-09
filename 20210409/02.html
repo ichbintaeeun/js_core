@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			let users = [
+				{ name: 'John',age: 20,surname:'Johnson'},
+				{ name: 'Pete',age: 19,surname:'Petershon'},
+				{ name: 'Ann',age: 18,surname:'Hathaway'}
+			];
+
+			//user.sort( (a, b) => a.name > b.name ? 1: -1);
+			//user.sort( (a, b) => a.age > b.age ? 1: -1);
+
+			function byField(fieldName){
+				return (a,b) => a[fieldName] > b[fieldName] ? 1: -1;
+			}
+
+			console.log(byField('name'));
+			console.log(byField('age'));
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
