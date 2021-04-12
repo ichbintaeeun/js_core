@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			// 과제 : 숫자 설정과 감소가 가능한 counter 만들기
+			function makeCounter(){
+				let count = 0;
+
+				function counter(){
+					return count++;
+				}
+
+				counter.set = vaule => count = value;
+				counter.decrease = () => count--;
+
+				return counter;
+			}
+		</script>
+	</head>
+	<body>
+	</body>
+</html>

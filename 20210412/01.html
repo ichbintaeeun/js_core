@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<script>
+			// let sayHi = function func(who){
+			// 	console.log(`Hello, ${who}`);
+			// };
+
+			// sayHi('John');
+
+			let sayHi = function func(who){
+				if(who){
+					console.log(`Hello, ${who}`);
+				}else{
+					func('Guest');
+				}
+			};
+
+			sayHi(); // Hello, Guest
+			func(); // func is not defined
+		</script>
+	</head>
+	<body>
+	</body>
+</html>
